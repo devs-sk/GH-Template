@@ -1,0 +1,39 @@
+<Project>
+  <!-- .NET Framework, .NET Standard (<= 2.0) compatibility -->
+  <ItemGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
+    $(TargetFramework), '(?:net[1-4]|netstandard1|netstandard2\.0)'))">
+
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+    <PackageReference Include="IndexRange" Version="1.0.2" />
+  </ItemGroup>
+
+  <!-- .NET Framework, .NET Standard compatibility -->
+  <ItemGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
+    $(TargetFramework), '(?:net[1-4]|netstandard)'))">
+
+    <!-- For ImplicitUsings compatibility -->
+    <Using Remove="System.Net.Http" />
+
+    <!-- CodeAnalysis nullable attributes polyfill -->
+    <PackageReference Include="Nullable" Version="1.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+
+    <!-- SkipLocalsInitAttribute polyfill -->
+    <PackageReference Include="SkipLocalsInitAttribute.Sources" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+
+    <!-- IsExternalInitAttribute polyfill -->
+    <PackageReference Include="IsExternalInit" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net4.6.1</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TargetExt>.gha</TargetExt>
+
+    <Product>GH Project Name</Product>
+    <AssemblyTitle>GH Project Name</AssemblyTitle>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+    <Description>Long project description</Description>
+    <Company>Devs</Company>
+    <Copyright>Copyright © 2023</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.InteropServices.GuidAttribute">
+      <_Parameter1>8a60e987-0c21-42f8-afd2-cb6880f634d0</_Parameter1>
+    </AssemblyAttribute>
+
+    <AssemblyAttribute Include="Grasshopper.Kernel.GH_LoadingAttribute">
+      <_Parameter1>Grasshopper.Kernel.GH_LoadingDemand.ForceDirect</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <Import Project="..\props\common.props" />
+
+  <ItemGroup>
+    <Reference Include="GH_IO">
+      <HintPath>..\DynamicLinkingDependencies\GH_IO.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>..\DynamicLinkingDependencies\Grasshopper.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RhinoCommon">
+      <HintPath>..\DynamicLinkingDependencies\RhinoCommon.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputPath>..\output\bin\</OutputPath>
+    <IntermediateOutputPath>..\output\obj\</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\output\obj\</BaseIntermediateOutputPath>
+    <!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+    <StartArguments></StartArguments>
+    <StartAction>Program</StartAction>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\Resources\icons\ship.png" LogicalName="ship" />
+  </ItemGroup>
+
+</Project>

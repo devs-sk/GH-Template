@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Framework Launch Devs",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-devs",
+            "program": "C:/Program Files/Rhino 7/System/Rhino.exe",
+            "args": [
+                "/nosplash"
+            ],
+            "cwd": "C:/Program Files/Rhino 7/System",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Framework Attach",
+            "type": "clr",
+            "request": "attach"
+        }
+    ]
+}

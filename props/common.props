@@ -1,0 +1,8 @@
+<Project>
+  <Import Project="dotnet-compatibility.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Diagnostics" Version="7.1.2" />
+    <Using Include="Microsoft.Toolkit.Diagnostics" />
+  </ItemGroup>
+</Project>
