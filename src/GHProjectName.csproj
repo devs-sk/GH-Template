@@ -7,8 +7,7 @@
     <Nullable>enable</Nullable>
         <!-- ImplicitUsings are disabled, because we are using the ancient .NET
          Framework, which wouldn't compile with them unless we'd do complicated
-         workarounds and polyfills, all just to save a few lines of imports
-         code. We don't need this M$ crap. -->
+         workarounds and polyfills, all just to save a few lines of imports code. -->
     <ImplicitUsings>disable</ImplicitUsings>
     <LangVersion>11.0</LangVersion>
     <TargetExt>.gha</TargetExt>
