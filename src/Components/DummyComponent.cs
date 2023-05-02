@@ -1,4 +1,9 @@
-﻿using Grasshopper.Kernel;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+
+using Grasshopper.Kernel;
 using Grasshopper.Kernel.Data;
 
 namespace Devs_GH_Pipeline;
@@ -55,9 +60,9 @@ public class DumyComponent : GH_Component
         int wholeNumber = default;
         DA.GetData(IN_PARAM_COUNT, ref wholeNumber);
 
-        List<GH_DevsType?>? list = new();
+        List<GH_DevsType?> list = new();
         DA.GetDataList(IN_PARAM_COUNT, list);
-        if (list is null || list.Any(p => p is null))
+        if (list.Any(p => p is null))
         {
             AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Some data or the data list is null.");
             return;
