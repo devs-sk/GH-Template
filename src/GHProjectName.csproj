@@ -5,8 +5,11 @@
     <TargetFrameworks>net4.6.1</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <LangVersion>latest</LangVersion>
+        <!-- ImplicitUsings are disabled, because we are using the ancient .NET
+         Framework, which wouldn't compile with them unless we'd do complicated
+         workarounds and polyfills, all just to save a few lines of imports code. -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>11.0</LangVersion>
     <TargetExt>.gha</TargetExt>
 
     <Product>GH Project Name</Product>
@@ -32,8 +35,6 @@
       <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
     </AssemblyAttribute>
   </ItemGroup>
-
-  <Import Project="..\props\common.props" />
 
   <ItemGroup>
     <Reference Include="GH_IO">

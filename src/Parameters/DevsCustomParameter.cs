@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+
 using Grasshopper.Kernel;
 
 namespace Devs_GH_Pipeline;
