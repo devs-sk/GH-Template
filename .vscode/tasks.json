@@ -32,8 +32,6 @@
                 "Release",
                 "src",
                 "/p:GenerateFullPaths=true",
-                "/p:ExcludeDebugTools=true",
-                "/p:UseProductionIPAddress=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "group": {
