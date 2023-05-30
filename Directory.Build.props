@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- Tell MSBuild about where to put its nuget files before the .csproj file
+         is included. By duplicating the property here, MSBuild won't put its
+         build files into our src dir, and will respect the path we give it. -->
+    <BaseIntermediateOutputPath>..\output\obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
