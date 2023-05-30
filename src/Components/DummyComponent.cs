@@ -23,7 +23,7 @@ public class DummyComponent : GH_Component
     public override GH_Exposure Exposure => GH_Exposure.primary;
     protected override Bitmap Icon => Properties.ShipIcon;
     // Change for every new component
-    public override Guid ComponentGuid => new Guid("57bc3ae8-c795-4a42-8844-52ae1ce22ae2");
+    public override Guid ComponentGuid => new Guid("aec211a0-7587-46a2-a266-0d8cedac166c");
 
     private const int IN_PARAM_COUNT = 0;
     private const int IN_PARAM_CUSTOM = 1;
