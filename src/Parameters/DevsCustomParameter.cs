@@ -18,6 +18,7 @@ class DevsCustomParameter : GH_PersistentParam<GH_DevsType>
     // For enabling a floating parameter set to anything else
     public override GH_Exposure Exposure => GH_Exposure.hidden;
     protected override Bitmap Icon => Properties.ShipIcon;
+    // Change for every new parameter
     public override Guid ComponentGuid => new Guid("d14c9b0a-6c5d-4f90-880c-f4de7d0a1d70");
 
     protected override GH_GetterResult Prompt_Plural(ref List<GH_DevsType> values)

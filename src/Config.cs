@@ -4,9 +4,6 @@ using System.Reflection;
 
 namespace Devs_GH_Pipeline;
 
-/// <summary>
-/// The Monoceros Pro configuration and constants.
-/// </summary>
 internal class Config
 {
 

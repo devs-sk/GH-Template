@@ -8,14 +8,14 @@ using Grasshopper.Kernel.Data;
 
 namespace Devs_GH_Pipeline;
 
-public class DumyComponent : GH_Component
+public class DummyComponent : GH_Component
 {
 
-    public DumyComponent() : base("Full Name",
-                                  "Short Name",
-                                  "Long describing sentence.",
-                                  "Tab Name",
-                                  "Group Name")
+    public DummyComponent() : base("Full Name",
+                                   "Short Name",
+                                   "Long describing sentence.",
+                                   "Tab Name",
+                                   "Group Name")
     {
         Message = Config.VersionHint;
     }

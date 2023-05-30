@@ -25,6 +25,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <!-- These attributes are appended to the generated AssemblyInfo.cs. If you
+       need more control, set
+       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>, and fill those in
+       yourself, together with other project metadata (author, company, version,
+       etc..) -->
   <ItemGroup>
     <AssemblyAttribute Include="System.Runtime.InteropServices.GuidAttribute">
       <_Parameter1>8a60e987-0c21-42f8-afd2-cb6880f634d0</_Parameter1>
